@@ -1,0 +1,51 @@
+.popular__position-sec {
+  padding-bottom: 70px;
+}
+
+.position__slide {
+  max-width: 292px;
+  width: 100%;
+  margin: 0 15px;
+  padding: 25px 0;
+  outline: none;
+}
+
+.slick__slider__btn {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #ffd200;
+  outline: none;
+  cursor: pointer;
+}
+
+.slick__slider-right {
+  top: -84px;
+  right: 0;
+  background-image: url(../img/right.svg);
+  background-repeat: no-repeat;
+  background-position: 52% center;
+}
+
+.slick__slider-left {
+  top: -84px;
+  right: 50px;
+  background-image: url(../img/left.svg);
+  background-repeat: no-repeat;
+  background-position: 52% center;
+}
+
+.slick__slider__btn:hover {
+  background-color: #dfb800;
+}
+
+.slick__slider-right:hover {
+  background-image: url(../img/right__hover.svg);
+}
+
+.slick__slider-left:hover {
+  background-image: url(../img/left__hover.svg);
+}

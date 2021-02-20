@@ -1,0 +1,41 @@
+.contacts-sec {
+  margin-bottom: 100px;
+}
+
+.contacts-sec__item {
+  border-radius: 16px;
+  margin-bottom: 40px;
+  display: flex;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.contacts-sec__inner {
+  &:first-child {
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-bottom: 50px;
+    background: #F8F8F8;
+    width: 29%;
+    border-radius: 16px 0 0 16px;
+    .about-inner__title {
+      margin-bottom: 30px;
+    }
+  }
+  &:last-child {
+    width: 71%;
+    display: flex;
+    border-radius: 0 16px 16px 0;
+  }
+  .footer__list-item-mod:first-child .footer__list-link {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+}
+
+.contacts-sec__img {
+  object-fit: cover;
+  border-radius: 0 16px 16px 0;
+}

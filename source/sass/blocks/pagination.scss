@@ -1,0 +1,50 @@
+.pagination-wrapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-list {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-list__item span {
+  color: #111111;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 10px;
+}
+
+.pagination-list__link {
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.pagination-list__link--active {
+  border: 1.5px solid #111;
+  border-radius: 4px;
+}
+
+.pagination-btn {
+  position: relative;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.pagination-btn--active > svg path {
+  fill: #111;
+}

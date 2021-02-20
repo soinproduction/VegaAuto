@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/picturefill.min.js" async="async"></script>
+  <link rel="preload" href="fonts/latoheavy.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="display: none">
+    <include src="build/img/sprite/sprite.svg"></include>
+  </div>
+  <header>
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-box">
+          <a href="#" class="header__logo">
+            <img src="img/header__logo.svg" alt="Логотип" class="header__logo-img" />
+          </a>
+          <div class="header__search">
+            <form class="search__form">
+              <div class="search__wrapper">
+                <div class="accordion search">
+                  <div class="search__type-btn">
+                    Поиск по артикулу
+                    <span class="list__marker">
+                      <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.41336 1.19334L4.00002 3.78L6.58669 1.19334C6.64841 1.13162 6.72169 1.08266 6.80233 1.04925C6.88297 1.01585 6.9694 0.998657 7.05669 0.998657C7.14398 0.998657 7.23041 1.01585 7.31105 1.04925C7.3917 1.08266 7.46497 1.13162 7.52669 1.19334C7.58841 1.25506 7.63737 1.32833 7.67078 1.40898C7.70418 1.48962 7.72137 1.57605 7.72137 1.66334C7.72137 1.75062 7.70418 1.83706 7.67078 1.9177C7.63737 1.99834 7.58841 2.07162 7.52669 2.13334L4.46669 5.19334C4.40502 5.25514 4.33176 5.30417 4.25111 5.33763C4.17046 5.37108 4.084 5.3883 3.99669 5.3883C3.90938 5.3883 3.82292 5.37108 3.74227 5.33763C3.66163 5.30417 3.58837 5.25514 3.52669 5.19334L0.466691 2.13334C0.404889 2.07166 0.355857 1.9984 0.322403 1.91775C0.288948 1.8371 0.271729 1.75065 0.271729 1.66334C0.271729 1.57603 0.288948 1.48957 0.322403 1.40892C0.355857 1.32827 0.404889 1.25501 0.466691 1.19334C0.726691 0.940004 1.15336 0.933338 1.41336 1.19334Z"
+                          fill="#111111" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="panel search-list">
+                  <div class="panel__wrapp">
+                    <p>Поиск по артикулу</p>
+                    <p>Общий поиск</p>
+                  </div>
+                </div>
+              </div>
+              <input type="text" placeholder="Поиск" />
+              <button class="form__search-btn">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.125 16.2411L12.405 11.5211C13.5393 10.1595 14.1049 8.41291 13.9842 6.64483C13.8635 4.87675 13.0658 3.22326 11.757 2.02834C10.4483 0.833415 8.72922 0.189061 6.95748 0.229318C5.18574 0.269575 3.49773 0.991344 2.2446 2.24448C0.991466 3.49761 0.269697 5.18562 0.22944 6.95736C0.189183 8.7291 0.833537 10.4482 2.02846 11.7569C3.22338 13.0657 4.87687 13.8634 6.64495 13.9841C8.41303 14.1047 10.1596 13.5391 11.5213 12.4049L16.2413 17.1249L17.125 16.2411ZM1.50001 7.12489C1.50001 6.01237 1.82991 4.92483 2.44799 3.99981C3.06608 3.07478 3.94458 2.35381 4.97242 1.92807C6.00025 1.50232 7.13125 1.39093 8.22239 1.60797C9.31354 1.82501 10.3158 2.36074 11.1025 3.14741C11.8892 3.93408 12.4249 4.93636 12.6419 6.02751C12.859 7.11865 12.7476 8.24965 12.3218 9.27748C11.8961 10.3053 11.1751 11.1838 10.2501 11.8019C9.32507 12.42 8.23753 12.7499 7.12501 12.7499C5.63368 12.7482 4.2039 12.1551 3.14936 11.1005C2.09483 10.046 1.50167 8.61622 1.50001 7.12489V7.12489Z"
+                    fill="#E0E0E0" />
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="header__info">
+            <div class="header__lang">
+              <a href="#" class="header__lang-link header__lang-link--active">RO</a>
+              <a href="#" class="header__lang-link">RU</a>
+            </div>
+            <div class="chart__box">
+              <p class="chart__day">По будням</p>
+              <p class="chart__time">9:00-18:00</p>
+            </div>
+            <div class="tell__box">
+              <a href="tel:37360555555" class="header__tell">+373(60) 55 55 55</a>
+              <a href="#" class="call__back">Позвонить мне</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="mobile__menu-box">
+          <div class="hamburger__wrapp">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="mobile__menu">
+            <nav class="header__nav">
+              <ul class="nav__list">
+                <li class="list__item">
+                  <a href="#" class="item__link"> заказы </a>
+                </li>
+                <li class="list__item">
+                  <a href="#" class="item__link"> оплата </a>
+                </li>
+                <li class="list__item">
+                  <a href="#" class="item__link"> доставка </a>
+                </li>
+                <li class="list__item">
+                  <a href="#" class="item__link"> о магазине </a>
+                </li>
+                <li class="list__item">
+                  <a href="#" class="item__link"> новости </a>
+                </li>
+                <li class="list__item">
+                  <a href="#" class="item__link"> Контакты </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header__bottom-box">
+          <div class="header__main-wrapp">
+            <div class="header__catalog-btn header__catalog-all">
+              каталог <b>товаров</b>
+              <span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="6.78789" height="6.78789" rx="1.2" fill="#111111" />
+                  <rect x="9.21228" width="6.78789" height="6.78789" rx="1.2" fill="#111111" />
+                  <rect x="9.21228" y="9.21216" width="6.78789" height="6.78789" rx="1.2" fill="#111111" />
+                  <rect y="9.21216" width="6.78789" height="6.78789" rx="1.2" fill="#111111" />
+                </svg>
+              </span>
+              <div class="aside__menu">
+                <ul class="aside__list">
+                  <li class="asside__list-item">
+                    <a href="#" class="aside__item-link">
+                      Диски
+                    </a>
+                    <ul class="aside__list-second">
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Аккумуляторы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Клемы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Зарядные устройства
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Тестеры
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Стенды для АКБ
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="asside__list-item">
+                    <a href="#" class="aside__item-link">
+                      Аккумуляторы
+                    </a>
+                    <ul class="aside__list-second">
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Аккумуляторы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Клемы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Зарядные устройства
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Тестеры
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Стенды для АКБ
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="asside__list-item">
+                    <a href="#" class="aside__item-link">
+                      Масла и смазки
+                    </a>
+                    <ul class="aside__list-second">
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Аккумуляторы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Клемы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Зарядные устройства
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Тестеры
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Стенды для АКБ
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="asside__list-item">
+                    <a href="#" class="aside__item-link">
+                      Автоэлектрика
+                    </a>
+                    <ul class="aside__list-second">
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Аккумуляторы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Клемы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Зарядные устройства
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Тестеры
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Стенды для АКБ
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="asside__list-item">
+                    <a href="#" class="aside__item-link">
+                      Радиаторы
+                    </a>
+                    <ul class="aside__list-second">
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Аккумуляторы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Клемы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Зарядные устройства
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Тестеры
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Стенды для АКБ
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="asside__list-item">
+                    <a href="#" class="aside__item-link">
+                      Оптика
+                    </a>
+                    <ul class="aside__list-second">
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Аккумуляторы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Клемы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Зарядные устройства
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Тестеры
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Стенды для АКБ
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="asside__list-item">
+                    <a href="#" class="aside__item-link">
+                      Кузов
+                    </a>
+                    <ul class="aside__list-second">
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Аккумуляторы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Клемы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Зарядные устройства
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Тестеры
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Стенды для АКБ
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="asside__list-item">
+                    <a href="#" class="aside__item-link">
+                      Автохимия
+                    </a>
+                    <ul class="aside__list-second">
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Аккумуляторы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Клемы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Зарядные устройства
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Тестеры
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Стенды для АКБ
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="asside__list-item">
+                    <a href="#" class="aside__item-link">
+                      Аксессуары
+                    </a>
+                    <ul class="aside__list-second">
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Аккумуляторы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Клемы
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Зарядные устройства
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Тестеры
+                        </a>
+                      </li>
+                      <li class="asside__decond-item">
+                        <a href="#" class="aside__item-link-mod">
+                          Стенды для АКБ
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__sale-btn header__catalog-all">
+              <span class="sale__picture">
+                <svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.7782 16.1587C12.5354 16.1587 11.5243 17.1713 11.5243 18.416C11.5243 19.6607 12.5354 20.6733 13.7782 20.6733C15.0209 20.6733 16.0321 19.6607 16.0321 18.416C16.0321 17.1713 15.0209 16.1587 13.7782 16.1587ZM13.7782 19.2366C13.3264 19.2366 12.9589 18.8685 12.9589 18.416C12.9589 17.9636 13.3264 17.5955 13.7782 17.5955C14.2299 17.5955 14.5975 17.9636 14.5975 18.416C14.5975 18.8685 14.2299 19.2366 13.7782 19.2366Z"
+                    fill="#FFD200" />
+                  <path
+                    d="M9.88558 12.2605C9.88558 11.0158 8.87449 10.0032 7.63172 10.0032C6.38894 10.0032 5.37781 11.0158 5.37781 12.2605C5.37781 13.5051 6.3889 14.5178 7.63167 14.5178C8.87444 14.5178 9.88558 13.5051 9.88558 12.2605ZM6.81238 12.2605C6.81238 11.808 7.17992 11.4399 7.63167 11.4399C8.08342 11.4399 8.45095 11.808 8.45095 12.2605C8.45095 12.7129 8.08342 13.081 7.63167 13.081C7.17992 13.081 6.81238 12.7129 6.81238 12.2605Z"
+                    fill="#FFD200" />
+                  <path
+                    d="M14.2264 10.9298C13.917 10.6819 13.4656 10.7322 13.2182 11.042L7.07187 18.7366C6.82441 19.0464 6.87457 19.4985 7.18387 19.7463C7.50789 20.0059 7.95686 19.9286 8.19204 19.6342L14.3384 11.9396C14.5859 11.6297 14.5357 11.1776 14.2264 10.9298Z"
+                    fill="#FFD200" />
+                  <path
+                    d="M9.16852 0C8.84899 0 8.56849 0.212018 8.47988 0.519485C8.39127 0.826951 8.51694 1.1564 8.78736 1.3269C8.81471 1.34414 11.5244 3.07917 11.5244 5.33512C11.5244 6.42399 10.6399 7.30985 9.55265 7.30985C8.46544 7.30985 7.58092 6.42399 7.58092 5.33512C7.58092 4.46847 8.04511 4.00746 8.09876 3.95712C8.37362 3.73596 8.43866 3.35407 8.26311 3.04718C8.08666 2.7388 7.70282 2.61304 7.372 2.74196C7.18594 2.81437 0 5.70154 0 13.7993C0 19.7111 4.80229 24.5207 10.7051 24.5207C16.6079 24.5207 21.4102 19.7111 21.4102 13.7993C21.4102 5.00098 12.7145 0 9.16852 0V0ZM10.7051 23.0839C5.59332 23.0839 1.43453 18.9189 1.43453 13.7993C1.43453 8.4288 5.03393 5.80968 6.15687 5.04763C6.14993 5.14049 6.1463 5.23632 6.1463 5.33512C6.1463 7.21622 7.67436 8.74661 9.55261 8.74661C11.4309 8.74661 12.959 7.21622 12.959 5.33512C12.959 4.07436 12.4023 2.97931 11.7385 2.12162C13.6321 2.9534 19.9756 6.54257 19.9756 13.7992C19.9756 18.9189 15.8169 23.0839 10.7051 23.0839Z"
+                    fill="#FFD200" />
+                </svg>
+              </span>
+              скидки
+              <span class="sale__arrow">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.76664 7.74164L9.99997 10.975L13.2333 7.74164C13.3105 7.66449 13.402 7.60329 13.5028 7.56154C13.6037 7.51978 13.7117 7.49829 13.8208 7.49829C13.9299 7.49829 14.038 7.51978 14.1388 7.56154C14.2396 7.60329 14.3312 7.66449 14.4083 7.74164C14.4855 7.81879 14.5467 7.91039 14.5884 8.01119C14.6302 8.11199 14.6517 8.22003 14.6517 8.32914C14.6517 8.43825 14.6302 8.54629 14.5884 8.64709C14.5467 8.7479 14.4855 8.83949 14.4083 8.91664L10.5833 12.7416C10.5062 12.8189 10.4146 12.8802 10.3138 12.922C10.213 12.9638 10.1049 12.9853 9.9958 12.9853C9.88666 12.9853 9.77859 12.9638 9.67778 12.922C9.57697 12.8802 9.4854 12.8189 9.4083 12.7416L5.5833 8.91664C5.50605 8.83955 5.44476 8.74797 5.40294 8.64716C5.36112 8.54635 5.3396 8.43828 5.3396 8.32914C5.3396 8.22 5.36112 8.11193 5.40294 8.01112C5.44476 7.91031 5.50605 7.81874 5.5833 7.74164C5.9083 7.42498 6.44164 7.41664 6.76664 7.74164Z"
+                    fill="#FFD200" />
+                </svg>
+              </span>
+            </div>
+          </div>
+          <nav class="header__nav">
+            <ul class="nav__list">
+              <li class="list__item">
+                <a href="#" class="item__link"> заказы </a>
+              </li>
+              <li class="list__item">
+                <a href="#" class="item__link"> оплата </a>
+              </li>
+              <li class="list__item">
+                <a href="#" class="item__link"> доставка </a>
+              </li>
+              <li class="list__item">
+                <a href="#" class="item__link"> о магазине </a>
+              </li>
+              <li class="list__item">
+                <a href="#" class="item__link"> новости </a>
+              </li>
+              <li class="list__item">
+                <a href="#" class="item__link"> Контакты </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__user-box">
+            <a href="#" class="user__link">
+              <span>
+                <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M33.0547 7.07815C32.5311 5.8658 31.7761 4.76717 30.832 3.84378C29.8872 2.91763 28.7733 2.18163 27.5508 1.67581C26.2831 1.14922 24.9235 0.879681 23.5508 0.88284C21.625 0.88284 19.7461 1.41018 18.1133 2.40628C17.7227 2.64456 17.3516 2.90628 17 3.19143C16.6484 2.90628 16.2773 2.64456 15.8867 2.40628C14.2539 1.41018 12.375 0.88284 10.4492 0.88284C9.0625 0.88284 7.71875 1.14847 6.44922 1.67581C5.22266 2.18362 4.11719 2.91409 3.16797 3.84378C2.22264 4.76613 1.46749 5.86502 0.945312 7.07815C0.402344 8.33987 0.125 9.67972 0.125 11.0586C0.125 12.3594 0.390625 13.7149 0.917969 15.0938C1.35938 16.2461 1.99219 17.4414 2.80078 18.6485C4.08203 20.5586 5.84375 22.5508 8.03125 24.5703C11.6562 27.918 15.2461 30.2305 15.3984 30.3242L16.3242 30.918C16.7344 31.1797 17.2617 31.1797 17.6719 30.918L18.5977 30.3242C18.75 30.2266 22.3359 27.918 25.9648 24.5703C28.1523 22.5508 29.9141 20.5586 31.1953 18.6485C32.0039 17.4414 32.6406 16.2461 33.0781 15.0938C33.6055 13.7149 33.8711 12.3594 33.8711 11.0586C33.875 9.67972 33.5977 8.33987 33.0547 7.07815ZM17 27.8282C17 27.8282 3.09375 18.918 3.09375 11.0586C3.09375 7.07815 6.38672 3.85159 10.4492 3.85159C13.3047 3.85159 15.7812 5.44534 17 7.77346C18.2188 5.44534 20.6953 3.85159 23.5508 3.85159C27.6133 3.85159 30.9062 7.07815 30.9062 11.0586C30.9062 18.918 17 27.8282 17 27.8282Z"
+                    fill="#F8F8F8" />
+                </svg>
+              </span>
+            </a>
+            <a href="#" class="user__link basket__icon">
+              <span>
+                <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.8111 33.5555C13.1918 33.5555 14.3111 32.4363 14.3111 31.0555C14.3111 29.6748 13.1918 28.5555 11.8111 28.5555C10.4304 28.5555 9.31107 29.6748 9.31107 31.0555C9.31107 32.4363 10.4304 33.5555 11.8111 33.5555Z"
+                    fill="#F8F8F8" />
+                  <path
+                    d="M27 33.5555C28.3807 33.5555 29.5 32.4363 29.5 31.0555C29.5 29.6748 28.3807 28.5555 27 28.5555C25.6193 28.5555 24.5 29.6748 24.5 31.0555C24.5 32.4363 25.6193 33.5555 27 33.5555Z"
+                    fill="#F8F8F8" />
+                  <path
+                    d="M33.7556 3.96672C33.6522 3.83926 33.5218 3.73629 33.3739 3.66521C33.226 3.59412 33.0641 3.55669 32.9 3.55561H9.76666L10.4889 5.77783H31.4444L28.4778 19.1112H11.8111L6.73332 3.03339C6.6784 2.86279 6.58302 2.708 6.45533 2.58224C6.32763 2.45648 6.17141 2.36348 5.99999 2.31116L1.44444 0.911164C1.30436 0.86812 1.15718 0.853087 1.01129 0.866924C0.865403 0.880762 0.72367 0.923198 0.594184 0.99181C0.332675 1.13038 0.136922 1.36716 0.0499904 1.65005C-0.0369417 1.93295 -0.00793253 2.2388 0.130636 2.5003C0.269205 2.76181 0.505982 2.95757 0.78888 3.0445L4.77777 4.26672L9.87777 20.3778L8.05555 21.8667L7.9111 22.0112C7.46036 22.5306 7.20488 23.191 7.18866 23.8785C7.17243 24.566 7.39648 25.2377 7.82221 25.7778C8.12506 26.1461 8.50989 26.4384 8.94592 26.6314C9.38196 26.8243 9.85709 26.9125 10.3333 26.8889H28.8778C29.1725 26.8889 29.4551 26.7719 29.6634 26.5635C29.8718 26.3551 29.9889 26.0725 29.9889 25.7778C29.9889 25.4831 29.8718 25.2005 29.6634 24.9922C29.4551 24.7838 29.1725 24.6667 28.8778 24.6667H10.1555C10.0276 24.6623 9.90294 24.6251 9.79361 24.5584C9.68428 24.4918 9.59398 24.3981 9.53143 24.2864C9.46888 24.1747 9.43619 24.0488 9.43652 23.9208C9.43685 23.7928 9.47019 23.667 9.53332 23.5556L12.2111 21.3334H29.3667C29.6235 21.3397 29.8746 21.2567 30.0772 21.0987C30.2798 20.9407 30.4213 20.7174 30.4778 20.4667L34 4.91116C34.0338 4.74552 34.0293 4.57434 33.987 4.41068C33.9446 4.24701 33.8655 4.09517 33.7556 3.96672Z"
+                    fill="#F8F8F8" />
+                </svg>
+              </span>
+            </a>
+            <a href="#" class="user__link">
+              <span>
+                <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.9998 15.3333C13.2317 15.3333 11.536 14.631 10.2858 13.3807C9.03554 12.1305 8.33316 10.4348 8.33316 8.66667C8.33316 6.89856 9.03554 5.20286 10.2858 3.95262C11.536 2.70238 13.2317 2 14.9998 2C16.7679 2 18.4636 2.70238 19.7139 3.95262C20.9641 5.20286 21.6665 6.89856 21.6665 8.66667C21.6665 10.4348 20.9641 12.1305 19.7139 13.3807C18.4636 14.631 16.7679 15.3333 14.9998 15.3333Z"
+                    stroke="#F8F8F8" stroke-width="2.5" stroke-linecap="round" />
+                  <path
+                    d="M1.66658 32V30.3334C1.66658 27.6812 2.72015 25.1377 4.59551 23.2623C6.47088 21.3869 9.01442 20.3334 11.6666 20.3334H18.3332C20.9854 20.3334 23.529 21.3869 25.4043 23.2623C27.2797 25.1377 28.3332 27.6812 28.3332 30.3334V32"
+                    stroke="#F8F8F8" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="section-bread">
+    <div class="container">
+      <div class="breadcrumbs breadcrumbs-border__none">
+        <ul class="breadcrumbs__list">
+          <li class="bread__a"><a href="#">Главная</a></li>
+          <li class="bread__span"><span>Корзина</span></li>
+        </ul>
+        <div class="breadcrumbs-bottom">
+          <div class="breadcrumbs-bottom__coll">
+            <h2 class="breadcrumbs__title">Корзина</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="basket-sec">
+    <div class="container">
+      <div class="basket-box">
+        <div class="basket-box__item">
+
+          <div class="basket-box__top">
+            <div class="basket-box__top_coll">
+              Наименование товара
+            </div>
+            <div class="basket-box__top_coll">
+              Цена, MDL
+            </div>
+            <div class="basket-box__top_coll">
+              Кол-во
+            </div>
+            <div class="basket-box__top_coll">
+              Сумма
+            </div>
+            <div class="basket-box__top_coll">
+              Удалить
+            </div>
+          </div>
+          <div class="basket-box__row">
+            <div class="basket-box__row_coll">
+              <img src="img/popular__slide/img1.png" alt="" class="basket-box__row_img">
+            </div>
+            <div class="basket-box__row_coll">
+              <h4 class="basket-box__title">
+                Mobil Super 3000
+              </h4>
+              <p class="basket-box__text">
+                Масло моторное синтетическое "Super 3000 X1 5W-40", 4л
+              </p>
+            </div>
+            <div class="basket-box__row_coll">
+                <p class="basket-box__price--old">
+                  1 350
+                </p>
+                <p class="basket-box__price--new">
+                  950
+                </p>
+            </div>
+            <div class="basket-box__row_coll">
+                <div class="basket-block__count">
+                  <div class="input__plus count__button">
+                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.58891 0.2155C4.63478 0.14888 4.69615 0.094408 4.76775 0.056777C4.83935 0.019146 4.91902 -0.000515938 4.99991 -0.000515938C5.08079 -0.000515938 5.16046 0.019146 5.23206 0.056777C5.30366 0.094408 5.36504 0.14888 5.41091 0.2155L9.91091 6.7155C9.963 6.79047 9.99354 6.87828 9.99922 6.9694C10.0049 7.06051 9.98552 7.15144 9.94315 7.2323C9.90079 7.31317 9.83707 7.38088 9.75893 7.42807C9.68078 7.47527 9.5912 7.50014 9.49991 7.5H0.499907C0.408829 7.49962 0.319576 7.47443 0.241748 7.42712C0.163919 7.37981 0.100459 7.31218 0.0581917 7.2315C0.0159247 7.15083 -0.00355002 7.06015 0.00186196 6.96923C0.00727394 6.87832 0.0373678 6.79059 0.0889073 6.7155L4.58891 0.2155Z"
+                        fill="#111111" />
+                    </svg>
+                  </div>
+                  <div class="input__line">
+                    <input value="1" class="input__count" type="number">
+                  </div>
+                  <div class="input__minus count__button">
+                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.58891 7.7845C4.63478 7.85112 4.69615 7.90559 4.76775 7.94322C4.83935 7.98085 4.91902 8.00052 4.99991 8.00052C5.08079 8.00052 5.16046 7.98085 5.23206 7.94322C5.30366 7.90559 5.36504 7.85112 5.41091 7.7845L9.91091 1.2845C9.963 1.20953 9.99354 1.12172 9.99922 1.0306C10.0049 0.93949 9.98552 0.848562 9.94315 0.767697C9.90079 0.686832 9.83707 0.619124 9.75893 0.571929C9.68078 0.524734 9.5912 0.499857 9.49991 0.500001H0.499907C0.408829 0.500377 0.319576 0.525574 0.241748 0.572882C0.163919 0.62019 0.100459 0.68782 0.0581917 0.768497C0.0159247 0.849175 -0.00355002 0.939848 0.00186196 1.03077C0.00727394 1.12168 0.0373678 1.20941 0.0889073 1.2845L4.58891 7.7845Z"
+                        fill="#111111" />
+                    </svg>
+                  </div>
+                </div>
+            </div>
+            <div class="basket-box__row_coll">
+              <p class="basket-box__price--old">
+                1 350
+              </p>
+              <p class="basket-box__price--new">
+                950
+              </p>
+              <p class="basket-box__price--old basket-box__price--old--mod">
+                2 &times; 950
+              </p>
+            </div>
+            <div class="basket-box__row_coll">
+              <a href="#" class="basket-button__link">
+                <svg width="24" height="24">
+                  <use xlink:href="#basket"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="basket-box__row">
+            <div class="basket-box__row_coll">
+              <img src="img/popular__slide/img4.png" alt="" class="basket-box__row_img">
+            </div>
+            <div class="basket-box__row_coll">
+              <h4 class="basket-box__title">
+                Аккамулятор Bosch
+              </h4>
+              <p class="basket-box__text">
+                Bosch S4 Asia 018 40Ач R+ EN330A 187x127x227 540 126 033 B00
+              </p>
+            </div>
+            <div class="basket-box__row_coll">
+                <p class="basket-box__price--old">
+
+                </p>
+                <p class="basket-box__price--new">
+                  1700
+                </p>
+            </div>
+            <div class="basket-box__row_coll">
+                <div class="basket-block__count">
+                  <div class="input__plus count__button">
+                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.58891 0.2155C4.63478 0.14888 4.69615 0.094408 4.76775 0.056777C4.83935 0.019146 4.91902 -0.000515938 4.99991 -0.000515938C5.08079 -0.000515938 5.16046 0.019146 5.23206 0.056777C5.30366 0.094408 5.36504 0.14888 5.41091 0.2155L9.91091 6.7155C9.963 6.79047 9.99354 6.87828 9.99922 6.9694C10.0049 7.06051 9.98552 7.15144 9.94315 7.2323C9.90079 7.31317 9.83707 7.38088 9.75893 7.42807C9.68078 7.47527 9.5912 7.50014 9.49991 7.5H0.499907C0.408829 7.49962 0.319576 7.47443 0.241748 7.42712C0.163919 7.37981 0.100459 7.31218 0.0581917 7.2315C0.0159247 7.15083 -0.00355002 7.06015 0.00186196 6.96923C0.00727394 6.87832 0.0373678 6.79059 0.0889073 6.7155L4.58891 0.2155Z"
+                        fill="#111111" />
+                    </svg>
+                  </div>
+                  <div class="input__line">
+                    <input value="1" class="input__count" type="number">
+                  </div>
+                  <div class="input__minus count__button">
+                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.58891 7.7845C4.63478 7.85112 4.69615 7.90559 4.76775 7.94322C4.83935 7.98085 4.91902 8.00052 4.99991 8.00052C5.08079 8.00052 5.16046 7.98085 5.23206 7.94322C5.30366 7.90559 5.36504 7.85112 5.41091 7.7845L9.91091 1.2845C9.963 1.20953 9.99354 1.12172 9.99922 1.0306C10.0049 0.93949 9.98552 0.848562 9.94315 0.767697C9.90079 0.686832 9.83707 0.619124 9.75893 0.571929C9.68078 0.524734 9.5912 0.499857 9.49991 0.500001H0.499907C0.408829 0.500377 0.319576 0.525574 0.241748 0.572882C0.163919 0.62019 0.100459 0.68782 0.0581917 0.768497C0.0159247 0.849175 -0.00355002 0.939848 0.00186196 1.03077C0.00727394 1.12168 0.0373678 1.20941 0.0889073 1.2845L4.58891 7.7845Z"
+                        fill="#111111" />
+                    </svg>
+                  </div>
+                </div>
+            </div>
+            <div class="basket-box__row_coll">
+              <p class="basket-box__price--old">
+
+              </p>
+              <p class="basket-box__price--new">
+                1700
+              </p>
+              <p class="basket-box__price--old basket-box__price--old--mod">
+                2 &times; 950
+              </p>
+            </div>
+            <div class="basket-box__row_coll">
+              <a href="#" class="basket-button__link">
+                <svg width="24" height="24">
+                  <use xlink:href="#basket"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+
+
+
+        </div>
+        <div class="basket-box__item">
+          <div class="basket-box__inner">
+            <div class="order-list__card">
+              <p class="basket-descr">В корзине 3 товара</p>
+              <div class="order-price">
+                <p class="order-old__item">4700</p>
+                <p class="order-price__item"><span>3600</span> MDL</p>
+              </div>
+            </div>
+            <button class="confirm-btn">Продолжить оформление</button>
+            <button class="order-button basket-button">Вернуться к покупкам</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer__top">
+      <div class="conteainer">
+        <div class="subscribe__box">
+          <div class="subscribe__box-item">
+            <div class="subscribe__box-inner">
+              <span>
+                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.8664 53.4888H62.399L69.3322 16.5116H20.7996L13.8664 53.4888Z" fill="#FFD200" />
+                  <path
+                    d="M70 17.4544L68.6644 15.5686L41.6952 34.6717L27.3618 21.4398L25.7928 23.1386L33.9519 30.6691L13.0287 52.6924L14.7041 54.2847L35.6494 32.2359L41.5034 37.6393L48.0797 32.9814L61.4213 54.1057L63.3766 52.8717L49.9689 31.6431L70 17.4544Z"
+                    fill="#F8F8F8" />
+                  <path d="M21.6166 15.6947L19.9824 17.3289L23.4492 20.7957L25.0834 19.1616L21.6166 15.6947Z"
+                    fill="#F8F8F8" />
+                  <path d="M19.6443 22.2892H4.62216V24.6003H19.6443V22.2892Z" fill="#F8F8F8" />
+                  <path d="M17.3332 33.8445H2.31107V36.1556H17.3332V33.8445Z" fill="#F8F8F8" />
+                  <path d="M15.0221 45.3999H0V47.711H15.0221V45.3999Z" fill="#F8F8F8" />
+                  <path d="M61.2436 9.57837H21.9553V11.8894H61.2436V9.57837Z" fill="#F8F8F8" />
+                  <path d="M19.6442 9.57837H13.8664V11.8894H19.6442V9.57837Z" fill="#F8F8F8" />
+                  <path d="M56.6214 3.80054H17.3332V6.11161H56.6214V3.80054Z" fill="#F8F8F8" />
+                  <path d="M15.0221 3.80054H9.24426V6.11161H15.0221V3.80054Z" fill="#F8F8F8" />
+                  <path d="M39.2882 58.1108H11.5554V60.4219H39.2882V58.1108Z" fill="#F8F8F8" />
+                  <path d="M9.24454 58.1108H3.46674V60.4219H9.24454V58.1108Z" fill="#F8F8F8" />
+                  <path d="M34.6664 63.8884H8.0889V66.1995H34.6664V63.8884Z" fill="#F8F8F8" />
+                  <path d="M5.77781 63.8884H0V66.1995H5.77781V63.8884Z" fill="#F8F8F8" />
+                </svg>
+              </span>
+            </div>
+            <div class="subscribe__box-inner">
+              <h3 class="subscribe__box-title">Подписаться на рассылку</h3>
+              <p class="subscribe__box-descr">
+                И будьте вкурсе всех новостей и акций
+              </p>
+            </div>
+          </div>
+          <div class="subscribe__box-item">
+            <form class="footer__form">
+              <input type="text" placeholder="Введите E-mail" />
+              <button class="footer__form-btn">Подписаться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-box">
+          <div class="footer__box-left">
+            <div class="box__left-inner">
+              <a href="#" class="footer__logo">
+                <img src="img/footer__logo.svg" alt="Логотип" class="footer__logo-img" />
+              </a>
+            </div>
+            <div class="box__left-inner">
+              <h5 class="box__left-title">Оставайтесь с нами:</h5>
+              <div class="box__left__wrapper">
+                <a href="#" class="box__social-link">
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="#F8F8F8" />
+                    <path
+                      d="M21.7188 19H19.375V26H16.25V19H13.7188V16.0938H16.25V13.9062C16.25 13.0729 16.4062 12.3646 16.7188 11.7812C17.0312 11.1979 17.4688 10.7604 18.0312 10.4688C18.6146 10.1562 19.2812 10 20.0312 10C20.3646 10 20.7188 10.0208 21.0938 10.0625C21.4688 10.0833 21.7604 10.1146 21.9688 10.1562L22.2812 10.1875V12.6562H21.0312C20.4479 12.6562 20.0208 12.8125 19.75 13.125C19.5 13.4167 19.375 13.7812 19.375 14.2188V16.0938H22.1562L21.7188 19Z"
+                      fill="#111111" />
+                  </svg>
+                </a>
+                <a href="#" class="box__social-link">
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="#F8F8F8" />
+                    <path
+                      d="M18 14.4062C16 14.4062 14.4062 16.0312 14.4062 18C14.4062 20 16 21.5938 18 21.5938C19.9688 21.5938 21.5938 20 21.5938 18C21.5938 16.0312 19.9688 14.4062 18 14.4062ZM18 20.3438C16.7188 20.3438 15.6562 19.3125 15.6562 18C15.6562 16.7188 16.6875 15.6875 18 15.6875C19.2812 15.6875 20.3125 16.7188 20.3125 18C20.3125 19.3125 19.2812 20.3438 18 20.3438ZM22.5625 14.2812C22.5625 13.8125 22.1875 13.4375 21.7188 13.4375C21.25 13.4375 20.875 13.8125 20.875 14.2812C20.875 14.75 21.25 15.125 21.7188 15.125C22.1875 15.125 22.5625 14.75 22.5625 14.2812ZM24.9375 15.125C24.875 14 24.625 13 23.8125 12.1875C23 11.375 22 11.125 20.875 11.0625C19.7188 11 16.25 11 15.0938 11.0625C13.9688 11.125 13 11.375 12.1562 12.1875C11.3438 13 11.0938 14 11.0312 15.125C10.9688 16.2812 10.9688 19.75 11.0312 20.9062C11.0938 22.0312 11.3438 23 12.1562 23.8438C13 24.6562 13.9688 24.9062 15.0938 24.9688C16.25 25.0312 19.7188 25.0312 20.875 24.9688C22 24.9062 23 24.6562 23.8125 23.8438C24.625 23 24.875 22.0312 24.9375 20.9062C25 19.75 25 16.2812 24.9375 15.125ZM23.4375 22.125C23.2188 22.75 22.7188 23.2188 22.125 23.4688C21.1875 23.8438 19 23.75 18 23.75C16.9688 23.75 14.7812 23.8438 13.875 23.4688C13.25 23.2188 12.7812 22.75 12.5312 22.125C12.1562 21.2188 12.25 19.0312 12.25 18C12.25 17 12.1562 14.8125 12.5312 13.875C12.7812 13.2812 13.25 12.8125 13.875 12.5625C14.7812 12.1875 16.9688 12.2812 18 12.2812C19 12.2812 21.1875 12.1875 22.125 12.5625C22.7188 12.7812 23.1875 13.2812 23.4375 13.875C23.8125 14.8125 23.7188 17 23.7188 18C23.7188 19.0312 23.8125 21.2188 23.4375 22.125Z"
+                      fill="#111111" />
+                  </svg>
+                </a>
+                <a href="#" class="box__social-link">
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="#F8F8F8" />
+                    <path
+                      d="M26.1875 13.875C26.25 14.125 26.3021 14.4375 26.3438 14.8125C26.4062 15.1875 26.4479 15.5625 26.4688 15.9375C26.4896 16.2917 26.5 16.625 26.5 16.9375C26.5208 17.25 26.5312 17.5104 26.5312 17.7188V18C26.5312 19.875 26.4167 21.2604 26.1875 22.1562C26.0833 22.5104 25.8958 22.8229 25.625 23.0938C25.3542 23.3646 25.0312 23.5521 24.6562 23.6562C24.2604 23.7604 23.5104 23.8438 22.4062 23.9062C21.3021 23.9479 20.2917 23.9792 19.375 24H18C14.4375 24 12.2188 23.8854 11.3438 23.6562C10.5312 23.4271 10.0208 22.9271 9.8125 22.1562C9.70833 21.7604 9.625 21.2188 9.5625 20.5312C9.52083 19.8229 9.48958 19.2292 9.46875 18.75V18C9.46875 16.1458 9.58333 14.7708 9.8125 13.875C9.91667 13.5 10.1042 13.1771 10.375 12.9062C10.6458 12.6354 10.9688 12.4479 11.3438 12.3438C11.7396 12.2396 12.4896 12.1667 13.5938 12.125C14.6979 12.0625 15.7083 12.0208 16.625 12H18C21.5625 12 23.7812 12.1146 24.6562 12.3438C25.0312 12.4479 25.3542 12.6354 25.625 12.9062C25.8958 13.1771 26.0833 13.5 26.1875 13.875ZM16.25 20.5625L20.7188 18L16.25 15.4688V20.5625Z"
+                      fill="#111111" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="box__left-inner">
+              <h5 class="box__left-title">К оплате принимаем:</h5>
+              <div class="box__left__wrapper">
+                <a href="#" class="box__social-link">
+                  <svg width="63" height="31" viewBox="0 0 63 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="63" height="31" rx="4" fill="#F8F8F8" />
+                    <path
+                      d="M29.2626 11.3059L27.757 20.6753H30.1635L31.6683 11.3059H29.2626ZM36.5217 15.1225C35.6807 14.7072 35.1652 14.4269 35.1652 14.0021C35.1754 13.6159 35.6011 13.2203 36.5517 13.2203C37.3336 13.2006 37.9083 13.3844 38.3442 13.5672L38.5626 13.6647L38.8898 11.7043C38.4145 11.5206 37.6608 11.3181 36.7298 11.3181C34.3533 11.3181 32.6798 12.5538 32.6694 14.321C32.6498 15.6251 33.8675 16.3488 34.7789 16.7829C35.7098 17.2282 36.0267 17.5169 36.0267 17.9126C36.0164 18.5201 35.2739 18.8004 34.5811 18.8004C33.6212 18.8004 33.1055 18.656 32.3227 18.3175L32.0058 18.1731L31.6693 20.2104C32.2346 20.4617 33.2742 20.6828 34.3534 20.6941C36.879 20.6941 38.5224 19.4772 38.5431 17.5938C38.5513 16.5607 37.9092 15.7693 36.5217 15.1225ZM45.0595 11.3349H43.1976C42.6238 11.3349 42.1879 11.4999 41.9394 12.0887L38.3647 20.6753H40.8903L41.5859 18.8163H44.4116L44.7725 20.6828H47.0001L45.0595 11.3349ZM42.2864 16.9402C42.3351 16.9449 43.2558 13.9055 43.2558 13.9055L43.9889 16.9402C43.9889 16.9402 42.7617 16.9402 42.2864 16.9402ZM25.7461 11.3059L23.3882 17.6716L23.1314 16.4162C22.6954 14.9677 21.3286 13.3937 19.8032 12.6119L21.9623 20.666H24.5086L28.2924 11.3069H25.7461V11.3059Z"
+                      fill="#2394BC" />
+                    <path
+                      d="M22.3382 12.5141C22.1544 11.7997 21.5684 11.3179 20.7726 11.3076H17.0385L17 11.481C19.9129 12.1991 22.3578 14.4088 23.151 16.4872L22.3382 12.5141Z"
+                      fill="#EFC75E" />
+                  </svg>
+                </a>
+                <a href="#" class="box__social-link">
+                  <svg width="63" height="31" viewBox="0 0 63 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="63" height="31" rx="4" fill="#F8F8F8" />
+                    <path
+                      d="M35.7427 15.9998C35.7427 21.1781 31.5478 25.3739 26.3713 25.3739C21.1949 25.3739 17 21.1772 17 15.9998C17 10.8225 21.1959 6.62573 26.3713 6.62573C31.5467 6.62573 35.7427 10.8225 35.7427 15.9998Z"
+                      fill="#E2574C" />
+                    <path
+                      d="M37.6261 6.62573C35.5244 6.62573 33.5896 7.32599 32.026 8.49498L32.0335 8.49591C32.341 8.79304 32.6803 9.00216 32.9418 9.34422L30.992 9.37517C30.6864 9.68361 30.408 10.0192 30.1455 10.3679H33.5839C33.8455 10.6819 34.0873 10.9548 34.3067 11.3016H29.5222C29.3469 11.6034 29.1847 11.9137 29.0432 12.2362H34.8514C35.0032 12.5576 35.1392 12.8005 35.2545 13.1408H28.6991C28.5951 13.4643 28.5061 13.7951 28.4385 14.1325H35.5291C35.5985 14.4569 35.6519 14.7568 35.6885 15.0625H28.2979C28.2669 15.3709 28.251 15.684 28.251 15.9999H35.7419C35.7419 16.3318 35.7184 16.6392 35.6847 16.9374H28.2979C28.3297 17.2552 28.3766 17.5673 28.4385 17.8748H35.5178C35.4447 18.1786 35.3603 18.4841 35.2544 18.801H28.6775C28.7769 19.1216 28.8979 19.4328 29.03 19.7365H34.8514C34.6902 20.0777 34.5074 20.3505 34.3059 20.6701H29.5054C29.6948 20.9982 29.9038 21.3113 30.1306 21.6113L33.584 21.6628C33.2897 22.0162 32.9119 22.229 32.5678 22.5384C32.5865 22.5534 32.0175 22.5365 30.8973 22.5187C32.6015 24.2773 34.9835 25.374 37.626 25.374C42.8034 25.374 47.0001 21.1772 47.0001 15.9999C47.0001 10.8227 42.8043 6.62573 37.6261 6.62573Z"
+                      fill="#F4B459" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="footer__item">
+              <a href="#" class="footer__item-copy">
+                Copyright “VegAutoImpex” S.R.L. 2017-2020
+              </a>
+            </div>
+          </div>
+          <div class="footer__box-right">
+            <div class="footer__box-right-item">
+              <h5 class="right__item-title">О компании</h5>
+              <ul class="right__item-list">
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Заказы </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Оплата </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Доставка </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> О магазине </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Новости </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Контакты </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__box-right-item">
+              <h5 class="right__item-title">Марки автомобилей</h5>
+              <ul class="right__item-list">
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> BMW </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Mercedes-Benz </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Opel </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Volkswagen </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Toyota </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Honda </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__box-right-item">
+              <h5 class="right__item-title">Каталог запчастей</h5>
+              <ul class="right__item-list">
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link">
+                    Каталог запчастей
+                  </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Шины, диски </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Масла и ГСМ </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Аккамуляторы </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Аксессуары </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__list-link"> Автоэлектроника </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__box-right-item">
+              <h5 class="right__item-title right__item-title-mod">
+                Связаться с нами
+              </h5>
+              <ul class="right__item-list">
+                <li class="footer__list-item footer__list-item-mod">
+                  <a href="tel:37360555555" class="footer__list-link">
+                    <span>
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="18" cy="18" r="18" fill="#F8F8F8" />
+                        <path
+                          d="M25.5312 21.3125C25.8438 21.4375 26 21.6667 26 22C26 22.0625 25.9896 22.1146 25.9688 22.1562L25.2188 25.4062C25.1979 25.5104 25.1458 25.6042 25.0625 25.6875C25 25.7917 24.9167 25.8646 24.8125 25.9062C24.7083 25.9688 24.6042 26 24.5 26C20.5 26 17.0833 24.5833 14.25 21.75C11.4167 18.9167 10 15.5 10 11.5C10 11.3958 10.0208 11.2917 10.0625 11.1875C10.125 11.0833 10.1979 11 10.2812 10.9375C10.3854 10.8542 10.4896 10.8021 10.5938 10.7812L13.8438 10.0312C13.8854 10.0104 13.9375 10 14 10C14.3333 10 14.5625 10.1562 14.6875 10.4688L16.1875 13.9688C16.2292 14.0521 16.25 14.1458 16.25 14.25C16.25 14.4792 16.1562 14.6771 15.9688 14.8438L14.0938 16.375C14.5729 17.4167 15.3542 18.4792 16.4375 19.5625C17.5208 20.6458 18.5833 21.4271 19.625 21.9062L21.1562 20.0312C21.3229 19.8438 21.5208 19.75 21.75 19.75C21.8542 19.75 21.9479 19.7708 22.0312 19.8125L25.5312 21.3125Z"
+                          fill="#FFD200" />
+                      </svg>
+                    </span>
+                    +373(60) 55 55 55
+                  </a>
+                </li>
+                <li class="footer__list-item footer__list-item-mod">
+                  <a href="mailto:tranthuy.nute@gmail.com" class="footer__list-link">
+                    <span>
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="18" cy="18" r="18" fill="#F8F8F8" />
+                        <path
+                          d="M25.6875 15.9688C25.75 15.9062 25.8125 15.8958 25.875 15.9375C25.9583 15.9792 26 16.0417 26 16.125V22.5C26 22.9167 25.8542 23.2708 25.5625 23.5625C25.2708 23.8542 24.9167 24 24.5 24H11.5C11.0833 24 10.7292 23.8542 10.4375 23.5625C10.1458 23.2708 10 22.9167 10 22.5V16.125C10 16.0417 10.0312 15.9896 10.0938 15.9688C10.1771 15.9271 10.25 15.9271 10.3125 15.9688C11 16.4896 12.6042 17.6667 15.125 19.5C15.1667 19.5417 15.3021 19.6562 15.5312 19.8438C15.7812 20.0312 15.9792 20.1771 16.125 20.2812C16.2708 20.3646 16.4583 20.4792 16.6875 20.625C16.9167 20.75 17.1354 20.8438 17.3438 20.9062C17.5729 20.9688 17.7917 21 18 21C18.1875 21 18.375 20.9792 18.5625 20.9375C18.75 20.875 18.9271 20.8125 19.0938 20.75C19.2604 20.6667 19.4375 20.5625 19.625 20.4375C19.8125 20.3125 19.9688 20.2083 20.0938 20.125C20.2188 20.0208 20.3646 19.9062 20.5312 19.7812C20.6979 19.6562 20.8125 19.5625 20.875 19.5C23.3333 17.7292 24.9375 16.5521 25.6875 15.9688ZM18 20C17.8333 20 17.625 19.9479 17.375 19.8438C17.1458 19.7188 16.9583 19.6146 16.8125 19.5312C16.6667 19.4271 16.4479 19.2708 16.1562 19.0625C15.8854 18.8333 15.7396 18.7188 15.7188 18.7188C13.1771 16.8646 11.3646 15.5208 10.2812 14.6875C10.0938 14.5417 10 14.3438 10 14.0938V13.5C10 13.0833 10.1458 12.7292 10.4375 12.4375C10.7292 12.1458 11.0833 12 11.5 12H24.5C24.9167 12 25.2708 12.1458 25.5625 12.4375C25.8542 12.7292 26 13.0833 26 13.5V14.0938C26 14.3438 25.9062 14.5417 25.7188 14.6875C24.6979 15.4792 22.8854 16.8229 20.2812 18.7188C20.2604 18.7188 20.1042 18.8333 19.8125 19.0625C19.5417 19.2708 19.3333 19.4271 19.1875 19.5312C19.0417 19.6146 18.8438 19.7188 18.5938 19.8438C18.3646 19.9479 18.1667 20 18 20Z"
+                          fill="#FFD200" />
+                      </svg>
+                    </span>
+                    tranthuy.nute@gmail.com
+                  </a>
+                </li>
+                <li class="footer__list-item footer__list-item-mod">
+                  <a href="#" class="footer__list-link">
+                    <span>
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="18" cy="18" r="18" fill="#F8F8F8" />
+                        <path
+                          d="M17.375 25.6875C16.875 24.9583 16.3021 24.1354 15.6562 23.2188C15.0312 22.3021 14.5833 21.6562 14.3125 21.2812C14.0417 20.9062 13.7292 20.4479 13.375 19.9062C13.0208 19.3438 12.7812 18.9479 12.6562 18.7188C12.5521 18.4896 12.4271 18.1979 12.2812 17.8438C12.1562 17.4896 12.0729 17.1875 12.0312 16.9375C12.0104 16.6667 12 16.3542 12 16C12 14.3333 12.5833 12.9167 13.75 11.75C14.9167 10.5833 16.3333 10 18 10C19.6667 10 21.0833 10.5833 22.25 11.75C23.4167 12.9167 24 14.3333 24 16C24 16.3542 23.9792 16.6667 23.9375 16.9375C23.9167 17.1875 23.8333 17.4896 23.6875 17.8438C23.5625 18.1979 23.4375 18.4896 23.3125 18.7188C23.2083 18.9479 22.9792 19.3438 22.625 19.9062C22.2708 20.4479 21.9583 20.9062 21.6875 21.2812C21.4167 21.6562 20.9583 22.3021 20.3125 23.2188C19.6875 24.1354 19.125 24.9583 18.625 25.6875C18.4792 25.8958 18.2708 26 18 26C17.7292 26 17.5208 25.8958 17.375 25.6875ZM16.2188 17.7812C16.7188 18.2604 17.3125 18.5 18 18.5C18.6875 18.5 19.2708 18.2604 19.75 17.7812C20.25 17.2812 20.5 16.6875 20.5 16C20.5 15.3125 20.25 14.7292 19.75 14.25C19.2708 13.75 18.6875 13.5 18 13.5C17.3125 13.5 16.7188 13.75 16.2188 14.25C15.7396 14.7292 15.5 15.3125 15.5 16C15.5 16.6875 15.7396 17.2812 16.2188 17.7812Z"
+                          fill="#FFD200" />
+                      </svg>
+                    </span>
+                    ул. Шаумяна, д. 47, г. Кишинев
+                  </a>
+                </li>
+                <li class="footer__list-item footer__list-item-mod">
+                  <a href="#" class="footer__list-link">
+                    <span>
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="18" cy="18" r="18" fill="#F8F8F8" />
+                        <path
+                          d="M12.5 12.5312C14.0208 11.0104 15.8542 10.25 18 10.25C20.1458 10.25 21.9688 11.0104 23.4688 12.5312C24.9896 14.0312 25.75 15.8542 25.75 18C25.75 20.1458 24.9896 21.9792 23.4688 23.5C21.9688 25 20.1458 25.75 18 25.75C15.8542 25.75 14.0208 25 12.5 23.5C11 21.9792 10.25 20.1458 10.25 18C10.25 15.8542 11 14.0312 12.5 12.5312ZM19.7812 21.1875C19.9896 21.3333 20.1667 21.3125 20.3125 21.125L21.1875 19.9062C21.3333 19.6979 21.3125 19.5208 21.125 19.375L19.125 17.9375V13.625C19.125 13.375 19 13.25 18.75 13.25H17.25C17 13.25 16.875 13.375 16.875 13.625V18.875C16.875 19 16.9271 19.1042 17.0312 19.1875L19.7812 21.1875Z"
+                          fill="#FFD200" />
+                      </svg>
+                    </span>
+                    По будням: 9:00 - 18:00
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="company__logo">
+                    <span>
+                      <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect opacity="0.5" width="19" height="20" fill="url(#pattern0)" />
+                        <defs>
+                          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0"
+                              transform="translate(0 -0.00556931) scale(0.0049505 0.00470297)" />
+                          </pattern>
+                          <image id="image0" width="202" height="215"
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMoAAADXCAYAAABbLc7tAAAPp0lEQVR4Xu2dvY4cyRGEl4IMCZBDAgucQYPv/1Q0To4WID0JcnTCHNjkcNg9lZEZWZVVFedu/WRExtfZvbw7vnvRP0MceP/+/R+ei79+/frOs097Yg7I9Jh/8G4vII8XCRjY+tAGgRKyz76ZBYiAsXvOXClQmG5enJUFyXGdpkt+EwVKssfZkAiW5AZ+O16gJPrcCxLBkthEgZJrbm9IBEtuPzVREvwdBYlgSWimJkqOqaMhESw5fdVEIfpaBRLBQmyqJgrfTIHC97TKiZoopE5Ug0RThdRYTRSukQKF62e10zRRSB0RKCQjix4jUAiNqQqJXr8IzdWrF8/E6qA8KtW/G4b3XhMF9+yXHbOBInDwpgsU3LPlQLkXpGlzHgiBIlAuHRA0P6wRKALF5MDu0AgUU0yeL5r9GwWxYFdgBAqSkou1O4Gy6/eMQBEoYQd2mDICJRyTl5ddJ8pOv2YWKAKF4MDPR6w4YQQKISaaKOcmrgSMQCGAcjuiKixHWEfVtwosAmUTUB5l9gZndmAEyqag3MvuBc3MsAgUEigVX788wewBjacuYptcRwkUl23nm3qEzFpuNIzZWqL1WX1grRMoLCe/nZMdMGu5zCBmamLWafXGs06geFxr7MkMlqXcrPBl6cqq1+KVdY1AsToFrssKVauMHqHL0Naj7pZ3z34uUCLuFZssvcO2EzACJRGUnr8J6w1J5q+XR2q5ioNASQalBywVgsWeLhU03UdDoHQAJQuWamFi66ykT6B0AuW4hvHkrRSgK/sYOm9nV9EqUDqD4n23rxIYxK6VYBEoSOe1FnZgFVgECtx6bfA4wABm5FQVKJ6ua4/LgZlhESiulmuT14FZYREo3o5rn9uBGWERKO52a2PUgSgwPb9ZBEq029ofcmAWWARKqM3azHBgBlgECqPTOiPsQHVYBEq4xTqA5UBlWMqBcpjV80ON1WidE3egKixDQPGaMRs8Hz9+/Pvvv//+n3h89jrBm4/DpYycdAUlakCmEUlR/OuHDx9++/Llyz9fXl7+SLpjyWMjWZkWlIjoZynIMCQjda+vr7+9vb396+Xl5X8Z5696ZiQ37GykTpSIUGvz2YZY70XXvb6+/uPt7e3fggVzLpIhZjZSQImIw2z8sZppireG1r5Pnz797fPnz//Va1jLqZ9/HskTKxd0UCKiMPt+Xc0yJVpHY/9fvoGibxbAaG+uWJmgguIVA/jVXMoypnlRbMHNd4ECeBjJFiMTNFAiQgC/TEsZxpgu0qKuDkQyFs0EBZSIgCyno8Zk1aVzYw54sxbNQxgUb+Exu2y7o+bYbtGq3g54MxfJQwgUb8E9jY2Y07NO3YU54M2eNw9uULyF3ttxVTTjbMs9WGu0upID3ox0BcVb5M1otNDIXYKlUrT5tXizgWbwVjk8UbzFeSC5tzZy73GOxyB+e69PfNRYvd6e3lzd5cmFx9cuoHgKYxpTYbJ4GmoJItNby33V1nh9RX2DQPEUhRZkaYSnjt6wRGu0+HC2JsNvby299nm9Rrwyg9KjGMRYbz2ZwDBqQjxorUWC0Dqr+s893iP+pIKCFOJphMecx3sYNTLq8Oi37mFotN41ap23B1ZvTKB4irAWEDXWUxsLFsbdUf3I/l49QWpirvX0w+rJ9KDcjPYYFIGFcR8zIOhZ1nCg545e7+2LxY8mKJ7LLRezTfXUicLCuIOtO3LeiD5F6rXs9fTI4sMyoGROFo/5lqZWWGMJSYU6kRrQflk8eAoKeuFNjOVSRDS61lPzs8nCOA/VMGL96L4xNXt61tK/HCiMyXKY5jGc2fDeZ7XC0rueyH1o71raqaC0LosIR/eiRqHnR9d7vcrW5a0r6gd7v8enZ9ovQWFfxDbCcp5Hg+Vcz5qsAGZpzKrX4513D+pNF1CqGoua5W3K2b7enrC19q6f6b33FfxK8+lE8Rhe2VSPnkjTRnvB1DtaS6QPHh9SQZnBTI9paJOq+cDSXE0X0hfUg+1B8Y5iS1OqBwkNS4XXSIvvljUe7Wf9/OXVi3WwRcSINR59V3VWB+Sx7qj22fQe+lHdKaDMaB5q3O5P2Hv9O/RboNx1PALLjGG5D/tu2j16H3v806sX48ARr1PonR6dtztmB0Sw2JNCBWXG4AiSn8Oyix+ozq1BQc06IjXjA8H+7PT/9zwz+YL2XqAgCVrsdeuZdDRIM76KohrvYfn+jRI5BMzekOWovhmDEDV2dY9QfduBghq0yysX689ZZnkFQ3MgUAyP3lmab5ACLUHDNNvkRfSFQZkpRIgxu04SxmSZJRNoHg5df36jeDdDj6pBi1fWlmnpqr55dS0NCmrKbK8RlUCZxTs0E1tMFK8pmQH0vuaMeLWZwT9PrxBdy4OCmNH7aYjW9hiGntAgtfasywPIscejCX71WtGMXqAgDbIEoUcv0Jp71GTxhvmHqzdNAqXDn76jYUOC0COYSP096kH8OVuL6Dkeou88m6KFZu+vpAmtxetNZkBRDZm1eP253+fRsz0omU1FGxINQRUtmXVEPfJ+pwiUr1+b//9lT3N6Q3LUmBVSRE9WDZ4+XO1B9SwHCmJA1kc8WgMzABU0bQ/KigawQzoakszJgmirnhVUCzRRqou/hQQ1QKDYHRjtrb3S9kpUi0Bpe2pegZhvPjSwkP1gQ/Sx7w7YcLoV0XI7QKAQO4CaT7z69Ch2WBF97LvZXiFatgaF3UjUeHbjr84bpZN9L9svtF9LTRREPLuRyN3spj87b5RO9r1sz9B+CRRCB1DTCVdCRzBDi2hl3gsJNixGdCz36oWIZzYRudfQQ/qSUVqZ99JNAX9DqolC6IBAOTdRoBDClXEEElhmE5F7M3S3zhyllXlvS6Pn50jfNFE8Dj/sQQwnXAcfwQwsopV5LyzasAHRIlAMhraWIIa3zsr4OTOwiFbmvRm+IFoECqEDiOGE6+AjmIFFtDLvhUUbNiBaBIrB0NYSxPDWWRk/ZwYW0cq8N8MXRItAIXQAMZxwHXwEM7CIVua9sGjDBkSLQDEY2lqCGN46K+PnzMAiWpn3ZviCaBEohA4ghhOug49gBhbRyrwXFm3YgGgRKAZDW0sQw1tnZfycGVhEK/PeDF8QLQKF0AHEcMJ18BHMwCJamffCohsbEB23owQKqQOo8aRrm8eww2rVyb63KRRcYNVxHLsUKDdRVgPYjbTeC/YzvHyUTva9YSMeDkD7tS0oN9/YzUTNZzf/8byR+th3s71CeyVQiB1AzSdefXoUO6yIPvbdbK8QLct9oyCvXhkTBb2f3fz78zKCioQr436mX6gWaKJkhWukAcy7BcoPNwVK0v+ClBlY9GnBvLsCLBkhHe3pyB7d/FxuoqBBzQgVWgMzBBX0ZNXA9AkFf3tQMl8nkWYwQpAVUFRHVh0MjzwPsT8nCrqxugmonkxQPLV4w5DZFwSUzDq83jzuQ/Qc+VgSFE9AsxuMNscaimp1Z9dj9eXZOrQXromS/QRmGFERFE9NLS96hNITqlbdo3/u0QRPlFlA8QSzR/COkKDNOvZVrrFnbRHYEO8PTQLlzvGRjb5qXsWarkI6slYrOAgk90NBoDw4PEOzraGIrPMGKnJnj71eXd///kLkgJnChOia6bUyO1Sr+ubV5QJlpkChxsykLQsW1LMdHpzLg+L5qN8ZFhSSmbxCtd0/ALYARbDYZg8apJkg8WSAAsrqJo34dawtzjmrPJCsnoFTUKLE5bSPe+oOYfA4toMvHo0CxZGmmT5YEXmeAM02SRhD4Ps3iuewHQy7D91qsHgh2aHvj73+CRQPLDOGZ6eAXE2XnTzwaBUo35LjMW+VD/zdtKN6zx7+4Yky4xg+Ao8auMJrmDS3v+BMoOzy+sWAZaaHRASQmXQ+YuDRLVBOHiYeIx+Pqf6dFtVYXd+zGYFqv9L6y6uXZ6LM/MTx6j1rTrVAoSGZQVP7xenHCo9+CBRPeKqFBDHUo/fZ+aO98ARkNUi8PU0HZfapwvpmGfVaxoJjld/seUB59oA7ffXyXLIKKF7tlgnGnjRsOHaGpJXfS1C8gWGHwRLAjDVZIfROnGr1ZHjOPNPjl2ui7A6KVz+z2b3P2vkh19L+dKJ4w9K6tHcAovd5nk7RO3vuV7/af1eOQDEmclVYBEkbkltEmqBoqvxM0irArAZI5LeWFi8EinGi3C+bHRZLMBy2DN/i6YvVCxMomirnGfA0ZmSarKEYWaP3bm8vrJ6kgtL63bTXlGr7vE3qocMahB61ZN7h6QHijRkUTRVbmz0Ns52MrUJCgJ1cb7XXc8SjdFB2mSpn8fE20BtFpPHeO6rt83qMegWBoqkSj4m3sY83o42OV17zBK+fqH9dQNl5qtSM1xpV9YLk5hYMineqCJY1wllFRU9I3KAIlipx2bcOgbJv76Xc6EBvSEITRVPF2FUtozrghST66u/6RjmUjyqa6rwOm8aBkXkLgRKZKlHCp+muCqU4MBKS8KuXJgslAzrE4IAXFPTPS65KCU+UKCwsIQavtWRSB7yQMN9ahoPCFDNpDlT2EwcqQEJ79YpOFcEiVs4cqAIJHRR93CvwLAcqQZICimBhRWXfcyKQZL2d0L5R7ttaUei+sZtLedXspIASnSpZT4W5IrNftVUhSXv1YnzcC5a9QKkMSToomix7hd2rtjokXUARLN747LFvBki6gSJY9gg9qjIKSc/X87SP+TPTZjIGbbrWYw7MloWuoDAmS8+nCNZ6rbY4wABkRAa6gyJYLHFac82skHT9RnlsPcM0/ZvH8wDF6PeISXI4PGSiHJfPbt48MR1XKavHIyEZOlEEy7jw9rp5FUhKgML6Zjmar9exXhg8v4cFSZV+Dn31ureaZezoEV0jpuOqWLWPZUBhTxYB0xcWJiAVe1cKFMHSN9ys21aHpMw3Ssavjh/PrPKuywpnhXPYgFScJCV+Pdxq9k6NaHlR6ecZfakMSdmJkvWRf3+uJgyO3o6ATDFRjiKzGlT9KYZHOWeH/Hf+/Sg57WifmtkwQfOr//L7hyflfuvVwiW7ebsDI3/PEzgdKBm/Qn4G5w7fMj3gODye1c8pQenx7XIGz6xNPtPSE44VpvTUoIwCZsanY28wVvsN4xKg9H4dq/6qNhKK1QCZ6tfDrQ/8Hn/ugtRwtZb56lYFhtVfUZcFZfTrGAOoWc9gPgiqebDMq9eVsZWfvNXC4K1nZUCWnyiPTRcwXgyu9+0AyHag6JWMB8pOgGwLyiwf/rxY807aERCBcpcfvZbp9ar1OFn+Y75lgL5lfnVo58lxlReB8oSknSaN4Hj+SBUowMhZCRyBATT+ZbL/HgWT1mf1LPAIjFgeNFFi/l3uHgWQgMhp6P8BRLKBedkguRIAAAAASUVORK5CYII=" />
+                        </defs>
+                      </svg>
+                    </span>
+                    Разработка сайта ilab.md
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

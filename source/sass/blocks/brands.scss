@@ -1,0 +1,34 @@
+.top__brand-sec {
+  padding-bottom: 76px;
+}
+
+// .top__brand-slider {
+//   max-width: 1580px;
+// }
+
+.top__brand-slide {
+  max-width: 130px;
+  width: 100%;
+  min-height: 90px;
+  margin: 0 7.5px;
+}
+
+.top__brand-wrapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 130px;
+  min-height: 90px;
+  filter: grayscale(100%);
+  transition: all .1s;
+}
+
+.top__brand-wrapp:hover {
+  filter: grayscale(0%);
+}
+
+.top__brand-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

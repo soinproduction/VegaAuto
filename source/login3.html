@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/picturefill.min.js" async="async"></script>
+  <link rel="preload" href="fonts/latoheavy.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="display: none">
+    <include src="build/img/sprite/sprite.svg"></include>
+  </div>
+  <section class="login-sec">
+    <div class="container">
+      <div class="login-wrapper">
+        <div class="login-second login-third">
+          <img src="img/header__logo.svg" alt="Логотип" class="login__logo-img" />
+          <div class="login-second__box">
+            <h3 class="login-second__title">
+              Регистрация
+            </h3>
+            <p class="ordering__descr">
+              Войти через аккаунт в социальной сети
+            </p>
+            <div class="ordering__wrapper">
+              <a href="#" class="ordering__link">
+                <svg width="16" height="17">
+                  <use xlink:href="#google"></use>
+                </svg>
+                Google
+              </a>
+              <a href="#" class="ordering__link">
+                <svg width="16" height="17">
+                  <use xlink:href="#fb"></use>
+                </svg>
+                Facebook
+              </a>
+            </div>
+            <span class="login-line">или</span>
+            <div class="login-third__form">
+              <form class="login-form">
+                <label>
+                  <span class="order-form__name">E-mail / Логин</span>
+                  <input class="login-input" type="text" placeholder="jhonsmith@gmail.com" />
+                </label>
+                <label>
+                  <span class="order-form__name">Пароль</span>
+                  <input class="login-input" type="password" placeholder="Придумайте пароль" />
+                </label>
+                <label>
+                  <span class="order-form__name">Подтвердите пароль</span>
+                  <input class="login-input" type="password" placeholder="Ведите пароль повторно" />
+                </label>
+              </form>
+              <form class="login-form">
+                <label>
+                  <span class="order-form__name">Имя</span>
+                  <input class="login-input" type="text" placeholder="Иван" />
+                </label>
+                <label>
+                  <span class="order-form__name">Фамилия</span>
+                  <input class="login-input" type="text" placeholder="Иванов" />
+                </label>
+                <label>
+                  <span class="order-form__name">Телефон</span>
+                  <input class="login-input" type="text" placeholder="+(373) ___  ___  ___  ___" />
+                </label>
+              </form>
+            </div>
+            <div class="login3-bottom__wrapper">
+              <div class="login-box__bottom">
+                <label class="fliter__checkbox">
+                  <input type="checkbox" value="value-1" />
+                  <span>Согласие на обработку <a href="#" class="personal">
+                    персональных данных
+                  </a></span>
+                </label>
+              </div>
+              <button class="login-button__first">
+                Регистрация
+              </button>
+            </div>
+            <a href="#" class="go-to__home">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.48427 2.44334L2.9276 6L6.48427 9.55667C6.56913 9.64154 6.63645 9.74229 6.68238 9.85317C6.72831 9.96406 6.75195 10.0829 6.75195 10.2029C6.75195 10.3229 6.72831 10.4418 6.68238 10.5527C6.63645 10.6636 6.56913 10.7643 6.48427 10.8492C6.3994 10.934 6.29865 11.0014 6.18777 11.0473C6.07688 11.0932 5.95804 11.1169 5.83802 11.1169C5.718 11.1169 5.59915 11.0932 5.48827 11.0473C5.37739 11.0014 5.27663 10.934 5.19177 10.8492L0.984269 6.64167C0.899291 6.55687 0.831872 6.45613 0.785873 6.34524C0.739873 6.23435 0.716195 6.11547 0.716195 5.99542C0.716195 5.87537 0.739873 5.75649 0.785873 5.6456C0.831872 5.53471 0.899291 5.43397 0.984269 5.34917L5.19177 1.14167C5.27657 1.05669 5.3773 0.989273 5.4882 0.943273C5.59909 0.897273 5.71796 0.873596 5.83802 0.873596C5.95807 0.873596 6.07695 0.897273 6.18784 0.943273C6.29873 0.989273 6.39946 1.05669 6.48427 1.14167C6.8326 1.49917 6.84177 2.08584 6.48427 2.44334Z" fill="#999999"/>
+              </svg>
+              Вернуться на главную
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

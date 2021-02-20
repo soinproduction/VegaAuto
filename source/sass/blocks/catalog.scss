@@ -1,0 +1,27 @@
+.section-bread {
+  padding: 32px 0 0px;
+}
+
+.section-catalog {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.catalog-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-box__right {
+  width: 80%;
+}
+
+.catalog-box__left {
+  width: 18%;
+  padding-top: 22px;
+  min-height: 1000px;
+}
+
+.mobile-filter__key {
+  display: none;
+}

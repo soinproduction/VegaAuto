@@ -1,0 +1,269 @@
+
+.login-wrapper {
+  position: relative;
+  padding: 100px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-second {
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  background: #F8F8F8;
+  box-shadow: 0px 10px 20px rgba(33, 53, 90, 0.1);
+  border-radius: 8px;
+  width: 30%;
+  padding: 60px 63px;
+  position: relative;
+  .ordering__descr {
+    margin-bottom: 15px;
+  }
+  .ordering__wrapper {
+    margin-bottom: 30px;
+    .ordering__link {
+      height: 51px;
+      width: 48%;
+    }
+  }
+}
+
+.login-third {
+  width: 55%;
+}
+
+.login__logo-img {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.login-second__title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.login-second__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  .login-line{
+    text-align: center;
+    color: #999;
+    position: relative;
+    width: 100%;
+    margin-bottom: 33px;
+    &::after{
+      content: '';
+      width: 43%;
+      height: 1px;
+      background-color: #999;
+      right: 0;
+      position: absolute;
+      top: 10px;
+    }
+    &::before{
+      content: '';
+      width: 43%;
+      height: 1px;
+      background-color: #999;
+      left: 0;
+      position: absolute;
+      top: 10px;
+    }
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.login-form label {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.order-form__name {
+  font-size: 16px;
+  line-height: 130%;
+  color: #111111;
+}
+
+
+.login-input {
+  height: 51px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  border: none;
+  padding: 0 20px;
+}
+
+.login-input::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  color: #999999;
+}
+
+.login-box__bottom {
+  width: 100%;
+  user-select: none;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot-password, .go-to__home {
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: underline;
+  color: #999999;
+}
+
+
+.login-button__first {
+  width: 100%;
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFD200;
+  border-radius: 4px;
+}
+
+.go-to__home  {
+  position: absolute;
+  bottom: -20%;
+  right: -50px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  font-size: 16px;
+  line-height: 21px;
+  svg {
+    margin-right: 10px;
+  }
+}
+
+
+.login2-second {
+
+  .login-second__title {
+    font-size: 18px;
+    line-height: 21px;
+    color: #111111;
+    margin-bottom: 20px;
+  }
+  .login-form {
+    margin-bottom: 0;
+  }
+  .ordering__descr {
+    color: rgba(17, 17, 17, 1);
+    margin-bottom: 30px;
+  }
+  .go-to__home {
+    bottom: -40%;
+  }
+
+}
+
+
+.login-third {
+  width: 55%;
+  .ordering__wrapper {
+    width: 60%;
+  }
+  .login-line{
+    text-align: center;
+    color: #999;
+    position: relative;
+    width: 100%;
+    margin-bottom: 33px;
+    &::after{
+      content: '';
+      width: 47%;
+      height: 1px;
+      background-color: #999;
+      right: 0;
+      position: absolute;
+      top: 10px;
+    }
+    &::before{
+      content: '';
+      width: 47%;
+      height: 1px;
+      background-color: #999;
+      left: 0;
+      position: absolute;
+      top: 10px;
+    }
+  }
+
+  .login-third__form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .login-form {
+      width: 48%;
+    }
+
+  }
+
+
+  .login3-bottom__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .login-button__first {
+      width: 48%;
+    }
+    .login-box__bottom {
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: 51px;
+      width: 48%;
+      .fliter__checkbox {
+        margin-bottom: 0;
+        width: 53%;
+      }
+      .fliter__checkbox>span::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
+      span {
+        display: block;
+        width: 100%;
+        padding-left: 30px;
+        position: relative;
+      }
+      .personal {
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
