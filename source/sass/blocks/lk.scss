@@ -43,7 +43,9 @@
   &--active {
     font-weight: 600;
     color: #111;
-
+    svg path{
+      fill-opacity: 1;
+    }
   }
 }
 
@@ -98,7 +100,10 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 30px;
-  padding: 0 86px;
+  padding: 0 67px;
+  &--history3 {
+    padding: 0 50px;
+  }
 }
 
 .lk-history__inner {
@@ -126,12 +131,12 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 15px;
-  padding: 0 86px;
+  padding: 0 67px;
 }
 
 .lk-history__text {
   line-height: 19px;
-  padding: 0 86px;
+  padding: 0 67px;
   color: rgba(17, 17, 17, 0.8);
   &--link {
     text-decoration: underline;
@@ -201,7 +206,7 @@
   color: rgba(17, 17, 17, 0.6);
   margin-left: auto;
   margin-top: 40px;
-  width: 20%;
+  width: 22.2%;
   margin-right: 66px;
   svg {
     margin-left: 10px;

@@ -517,7 +517,7 @@
               Моторные масла
             </h2>
           </div>
-          <div class="breadcrumbs-bottom__coll">
+          <div class="breadcrumbs-bottom__coll breadcrumbs-bottom__coll--opt">
             <p class="breadcrumbs__value">
               128
               <span>товаров</span>
@@ -741,10 +741,11 @@
               </button>
             </div>
           </div>
-          <button class="filter__show-more">
-            Показать 128 товара
-          </button>
+
         </div>
+        <button class="filter__show-more">
+          Показать 128 товара
+        </button>
       </div>
       <div class="catalog-box">
         <div class="catalog-box__left">
@@ -2272,18 +2273,7 @@
                 <li>
                   <a href="#" class="company__logo">
                     <span>
-                      <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect opacity="0.5" width="19" height="20" fill="url(#pattern0)" />
-                        <defs>
-                          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                            <use xlink:href="#image0"
-                              transform="translate(0 -0.00556931) scale(0.0049505 0.00470297)" />
-                          </pattern>
-                          <image id="image0" width="202" height="215"
-                            xlink:href="data:image/png;base64,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" />
-                        </defs>
-                      </svg>
+                      <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.1 5.7c-.5 0-1 0-1.5.3a4 4 0 00-1.4 1.4C1.3 9 .9 10.7.9 12.6a10.5 10.5 0 003.3 8c2.2 2.1 4.8 3.2 7.9 3.2 3 0 5.7-1 7.9-3.3.9-1 1.6-2 2.2-3 .5-1.1.9-2.4 1-3.7v-1.2-1.1c-.3-2.6-1.3-4.9-3.2-6.7a10.5 10.5 0 00-5.8-3.1 2 2 0 00-.5-1l-.9-.6a2.2 2.2 0 00-1.4 0c-.3.1-.6.3-.8.6a2 2 0 00-.7 1.5c0 .6.2 1.1.7 1.6.4.4.9.6 1.5.6a2.2 2.2 0 002.1-1.6c1.9.4 3.5 1.3 5 2.7 2 2 2.9 4.4 2.9 7.1a9.8 9.8 0 01-3 7.1c-2 2-4.3 3-7 3-2.8 0-5.2-1-7.1-3a9.8 9.8 0 01-3-7c0-2 .5-3.7 1.5-5.3.4-.5.9-.6 1.4-.6.5.1 1 .4 1.5.9l1.5 1.5a5 5 0 00-1.3 3.5c0 1.5.6 2.7 1.6 3.8l1.3 1c.8.4 1.7.6 2.6.6a5.2 5.2 0 003.9-1.6c1-1 1.6-2.3 1.6-3.8S17 9.9 16 8.8c-1.1-1-2.4-1.6-3.9-1.6-1.3 0-2.5.4-3.4 1.2l-2-1.9c-.6-.5-1.1-.8-1.6-.8zm2.6 7c0-1.3.4-2.3 1.3-3.2.8-.8 1.9-1.3 3.1-1.3 1.2 0 2.3.5 3.1 1.3.9.9 1.3 2 1.3 3.2 0 1.2-.4 2.2-1.3 3.1-.8.9-1.9 1.3-3 1.3-1.3 0-2.4-.4-3.2-1.3-.9-.9-1.3-2-1.3-3.1z" fill="#887108"/><path d="M10.6 11.1a2 2 0 00-.7 1.6c0 .6.2 1 .7 1.5.4.4.9.7 1.5.7a2.2 2.2 0 002.2-2.2 2 2 0 00-.6-1.6 2.1 2.1 0 00-3.1 0z" fill="#887108"/></svg>
                     </span>
                     Разработка сайта ilab.md
                   </a>

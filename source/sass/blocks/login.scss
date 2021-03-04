@@ -1,4 +1,8 @@
 
+.login-sec {
+  background: #F8F8F8;
+}
+
 .login-wrapper {
   position: relative;
   padding: 100px 0;
@@ -6,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .login-second {
@@ -54,7 +59,7 @@
   position: relative;
   .login-line{
     text-align: center;
-    color: #999;
+    color: #E0E0E0;
     position: relative;
     width: 100%;
     margin-bottom: 33px;
@@ -62,7 +67,7 @@
       content: '';
       width: 43%;
       height: 1px;
-      background-color: #999;
+      background-color: #E0E0E0;
       right: 0;
       position: absolute;
       top: 10px;
@@ -71,7 +76,7 @@
       content: '';
       width: 43%;
       height: 1px;
-      background-color: #999;
+      background-color: #E0E0E0;
       left: 0;
       position: absolute;
       top: 10px;
@@ -183,7 +188,7 @@
   }
   .login-line{
     text-align: center;
-    color: #999;
+    color: #E0E0E0;
     position: relative;
     width: 100%;
     margin-bottom: 33px;
@@ -191,7 +196,7 @@
       content: '';
       width: 47%;
       height: 1px;
-      background-color: #999;
+      background-color: #E0E0E0;
       right: 0;
       position: absolute;
       top: 10px;
@@ -200,7 +205,7 @@
       content: '';
       width: 47%;
       height: 1px;
-      background-color: #999;
+      background-color: #E0E0E0;
       left: 0;
       position: absolute;
       top: 10px;

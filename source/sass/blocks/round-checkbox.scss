@@ -12,6 +12,12 @@
   flex-wrap: wrap;
   position: relative;
   user-select: none;
+  outline: none;
+  webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.custom-radio+label:focus{
+  background: #000;
 }
 
 /* создание в label псевдоэлемента  before со следующими стилями */
@@ -34,11 +40,13 @@
 /* стили для активной радиокнопки (при нажатии на неё) */
 .custom-radio:not(:disabled):active+label::before {
   border-color: #FFD200;
+  outline: none;
 }
 
 /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
 .custom-radio:focus:not(:checked)+label::before {
   border-color: #fff780;
+  outline: none;
 }
 
 /* стили для радиокнопки, находящейся в состоянии checked */

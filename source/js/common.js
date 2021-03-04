@@ -61,7 +61,7 @@ $(function () {
           dots: true,
           arrows: false,
         }
-      }
+      },
     ]
   });
 
@@ -115,7 +115,7 @@ $(function () {
           dots: true,
           arrows: false,
         }
-      }
+      },
     ]
   });
 
@@ -356,6 +356,15 @@ $(function () {
   });
 
 
+  $('.content_toggle').click(function(){
+		$('.content_block').toggleClass('hide');
+		if ($('.content_block').hasClass('hide')) {
+			$('.content_toggle').html('Читать полностью');
+		} else {
+			$('.content_toggle').html('Скрыть описание');
+		}
+		return false;
+	});
 
 
 
